@@ -446,7 +446,7 @@ ul.portfolio li.active {
 }
 
 .portfolio .item a:hover:before{
-  opacity: 1;
+    opacity: 1;
 }
 
 .mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close {
@@ -472,11 +472,6 @@ ul.portfolio li.active {
     border-radius: 4px;
 	box-shadow: 0px 1px 2px 0px rgba(90, 91, 95, 0.15);
     transition: all 0.3s ease-in-out;
-}
-
-.team-carousel-list:hover {
-    box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
-    top: -5px;
 }
 
 .team-word {
@@ -631,6 +626,26 @@ ul.portfolio li.active {
     border: 1px solid #0685c2;
 }
 
+.arrow {
+    border: solid rgb(255, 255, 255);
+    border-width: 0 6px 6px 0;
+    display: inline-block;
+    padding: 6px;
+    position: absolute;
+    left: 50%;
+    bottom: -100%;
+    transform: translateX(-50%);
+}
+
+.arrow:hover{
+    border-width: 0 7px 7px 0;
+    padding: 7px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
 
 .social-icon {
     list-style: none;
