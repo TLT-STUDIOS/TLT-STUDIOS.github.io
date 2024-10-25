@@ -4,15 +4,28 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent default form submission
 
-        const formData = new FormData(form);
-        const actionUrl = 'https://hkdk.events/s7pe2vfovfvt0r';
+        const name = document.getElementById('name').value || "N/A";
+        const email = document.getElementById('email').value || "N/A";
+        const website = document.getElementById('website').value || "N/A";
+        const address = document.getElementById('address').value || "N/A";
+        const subject = document.getElementById('subject').value || "N/A";
+        const message = document.getElementById('message').value || "N/A";
 
-        console.debug(formData)
-        throw SyntaxError
+        const actionUrl = 'https://hkdk.events/s7pe2vfovfvt0r';
 
         fetch(actionUrl, {
             method: 'POST',
-            body: formData
+            headers: {
+                'Content-Type': 'application/json' // Set content type
+            },
+            body: JSON.stringify({ // Convert the object to JSON
+                name: name,
+                email: email,
+                website: website,
+                address: address,
+                subject: subject,
+                message: message
+            })
         })
         .then(response => {
             if (response.ok) {
@@ -22,13 +35,11 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(data => {
             console.log('Success:', data);
-            // You can add additional success handling here, like displaying a message
-            alert("Your data was sent!")
-            location.reload()
+            alert("Your data was sent!"); // Notify user of success
         })
         .catch((error) => {
             console.error('Error:', error);
-            // You can add error handling here
+            alert("There was an error sending your data."); // Notify user of error
         });
     });
 });
