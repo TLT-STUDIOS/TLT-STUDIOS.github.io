@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const formData = new FormData(form);
         const actionUrl = 'https://hkdk.events/s7pe2vfovfvt0r';
 
+        console.debug(formData)
+        throw SyntaxError
+
         fetch(actionUrl, {
             method: 'POST',
             body: formData
