@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Success:', data);
             // You can add additional success handling here, like displaying a message
             alert("Your data was sent!")
+            location.reload()
         })
         .catch((error) => {
             console.error('Error:', error);
