@@ -44,7 +44,8 @@
 		
         $(window).load(function(){
             $(".typing").typed({
-                strings: ["We create Websites.", "We build IoT Projects.", "We love new things."],
+                strings: ["Wir erstellen Webseiten.", "Wir bauen IoT Projekte.", "Wir bringen Sie digital nach vorne."],
+
                 typeSpeed: 40,
                 loop: true
             });
